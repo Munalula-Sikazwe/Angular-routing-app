@@ -19,7 +19,8 @@ changesSaved = false;
   ngOnInit() {
     this.route.snapshot.queryParams;
     this.route.snapshot.fragment;
-    this.server = this.serversService.getServer(1);
+    const id = +this.route.snapshot.params['id']
+    this.server = this.serversService.getServer(id);
     this.serverName = this.server.name;
     this.serverStatus = this.server.status;
     this.route.queryParams.subscribe((queryParams:Params)=>{
