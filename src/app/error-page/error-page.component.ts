@@ -13,7 +13,6 @@ errorMessage : string;
   ngOnInit(): void {
     this.route.data.subscribe((data:Data)=>{
       this.errorMessage = data['message'];
-
     })
   }
 
