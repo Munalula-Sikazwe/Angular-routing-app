@@ -17,6 +17,7 @@ import {AppRouting} from "./app-routing";
 import {AuthGuardService} from "./auth-guard.service";
 import {AuthService} from "./auth.service";
 import { ErrorPageComponent } from './error-page/error-page.component';
+import {ServerResolverService} from "./servers/server/server-resolver.service";
 
 
 
@@ -37,7 +38,7 @@ import { ErrorPageComponent } from './error-page/error-page.component';
     FormsModule,
     AppRouting,
   ],
-  providers: [ServersService,AuthGuardService,AuthService],
+  providers: [ServersService,AuthGuardService,AuthService,ServerResolverService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
